@@ -1,21 +1,44 @@
-make_sql_natural_key <- function(
-  tab_names,
-  key_names
+#' Create SQL string for joining on matching natural keys
+#'
+#' @description
+#'  Create string with SQL expressions for \code{WHERE} clause
+#'  to join two tables on the given columns.
+#'
+#' @details
+#'  The SQL string is created in 3 steps:
+#'  \enumerate{
+#'    \item Combine table names with key names, eg, "\code{PRL.FLIGHT_NR}".
+#'    \item Create logical expressions, eg, "\code{PRL.FLIGHT_NR = PRL_SSR.FLIGHT_NR}"
+#'    \item Concatenate logical expressions by \code{"and"} to form final SQL esxpression.
+#'  }
+#'
+#' @note
+#'  The current implementation assumes that key columns have the same names in both tables.
+#'
+#' @param table_names [character(2)]\cr
+#'  Name of data base tables to join.
+#' @param key_columns [character(1:Inf)]\cr
+#'  Names of key columns in both tables.
+#'
+#' @return
+#'  Character string to be used in SQL statement.
+#' @author Uwe Block
+#'
+#' @examples
+#' sqlstr::natural_key(c("TAB1", "tab_2"),c("COL1", "col_2"))
+#' @import magrittr
+#' @export
+natural_key <- function(
+  table_names,
+  key_columns
 ) {
-  library(magrittr)
-  checkmate::assert_character(
-    tab_names,
-    min.char = 1L, len = 2L, any.missing = FALSE, unique = TRUE)
-  checkmate::assert_character(
-    key_names,
-    min.char = 1L, min.len = 1L, any.missing = FALSE, unique = TRUE)
-  # create sql string in 3 steps:
-  # 1. combine table names with key names, eg., "PRL.FLIGHT_NR"
-  # 2. create logical expressions, eg, "PRL.FLIGHT_NR = PRL_SSR.FLIGHT_NR"
-  # 3. concatenate logical expressions by "and" to form final sql
+  checkmate::assert_character(table_names, min.chars = 1L, len = 2L, any.missing = FALSE,
+                              unique = TRUE, pattern = valid_identifier_regex())
+  checkmate::assert_character(key_columns, min.chars = 1L, min.len = 1L, any.missing = FALSE,
+                              unique = TRUE, pattern = valid_identifier_regex())
   sql <-
-    vapply(tab_names, FUN = paste, FUN.VALUE = character(length(key_names)),
-           key_names, sep = ".") %>%
+    vapply(table_names, FUN = paste, FUN.VALUE = character(length(key_columns)),
+           key_columns, sep = ".") %>%
     plyr::aaply(.margins = 1, .fun = paste, collapse = " = ") %>%
     paste(collapse = " and ")
   return(sql)

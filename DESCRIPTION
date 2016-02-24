@@ -1,9 +1,18 @@
-Package: makeSQL
+Package: sqlstr
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Title: Helpers to create SQL statements
+Version: 0.0.0.9000
+Authors@R: person("Uwe", "Block", email = "u.block.mz@gmail.com",
+                  role = c("aut", "cre"))
+Description: Helper functions to create commonly used strings which can be
+    combined to SQL statements under program control.
+License: MIT + file LICENSE
 LazyData: TRUE
+Imports:
+    assertive.base,
+    checkmate,
+    magrittr,
+    plyr
+Suggests:
+    testthat
+RoxygenNote: 5.0.1
