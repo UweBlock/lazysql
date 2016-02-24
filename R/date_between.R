@@ -16,9 +16,9 @@
 #' date1 <- as.Date("2016-02-22")
 #' date2 <- as.Date("2016-02-11")
 #' paste("select * from TEST_TABLE where",
-#'       sqlstr::date_between("STD_1", c(date1, date2)))
+#'       date_between("STD_1", c(date1, date2)))
 #' paste("select * from TEST_TABLE where",
-#'       sqlstr::date_between("STD_1", date1))
+#'       date_between("STD_1", date1))
 #' @export
 date_between <- function(
   column_name,

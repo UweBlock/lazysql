@@ -16,10 +16,10 @@
 #' @author Uwe Block
 #'
 #' @examples
-#' sqlstr::in_condition("COL_1", 1:3)
-#' sqlstr::in_condition("COL_1", 1:3, "not")
-#' sqlstr::in_condition("COL_1", LETTERS[2:3])
-#' sqlstr::in_condition("COL_1", LETTERS[2:3], "not")
+#' in_condition("COL_1", 1:3)
+#' in_condition("COL_1", 1:3, "not")
+#' in_condition("COL_1", LETTERS[2:3])
+#' in_condition("COL_1", LETTERS[2:3], "not")
 #'
 #' @import magrittr
 #' @export

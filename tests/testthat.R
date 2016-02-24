@@ -1,4 +1,4 @@
 library(testthat)
-library(sqlstr)
+library(lazysql)
 
-test_check("sqlstr")
+test_check("lazysql")

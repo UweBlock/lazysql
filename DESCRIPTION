@@ -1,7 +1,7 @@
-Package: sqlstr
+Package: lazysql
 Type: Package
-Title: Helpers to create SQL statements
-Version: 0.0.0.9000
+Title: Lazy SQL programming
+Version: 0.1.0
 Authors@R: person("Uwe", "Block", email = "u.block.mz@gmail.com",
                   role = c("aut", "cre"))
 Description: Helper functions to create commonly used strings which can be

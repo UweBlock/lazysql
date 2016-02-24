@@ -25,7 +25,7 @@
 #' @author Uwe Block
 #'
 #' @examples
-#' sqlstr::natural_key(c("TAB1", "tab_2"),c("COL1", "col_2"))
+#' natural_key(c("TAB1", "tab_2"),c("COL1", "col_2"))
 #' @import magrittr
 #' @export
 natural_key <- function(
