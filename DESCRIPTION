@@ -4,7 +4,7 @@ Title: Lazy SQL programming
 Version: 0.1.0
 Authors@R: person("Uwe", "Block", email = "u.block.mz@gmail.com",
                   role = c("aut", "cre"))
-Description: Helper functions to create commonly used strings which can be
+Description: Helper functions to create SQL expressions which can be
     combined to SQL statements under program control.
 License: MIT + file LICENSE
 LazyData: TRUE
