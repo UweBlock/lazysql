@@ -20,6 +20,10 @@ test_that("in_condition checks choices", {
   expect_error(in_condition("COL_1", integer(0)))
   expect_error(in_condition("COL_1", NULL))
   expect_error(in_condition("COL_1", 0.1))
+  expect_error(in_condition("COL_1", "don't do this"))
+  expect_error(in_condition("COL_1", 'or "this"'))
+  expect_error(in_condition("COL_1", "or \"this"))
+  expect_error(in_condition("COL_1", "or \'this"))
 })
 
 test_that("in_condition checks column_names", {

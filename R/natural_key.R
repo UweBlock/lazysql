@@ -25,7 +25,12 @@
 #' @author Uwe Block
 #'
 #' @examples
-#' natural_key(c("TAB1", "tab_2"),c("COL1", "col_2"))
+#' # SQL expression
+#' (sql_expr <- lazysql::natural_key(c("TAB1", "tab_2"),c("COL1", "col_2")))
+#'
+#' # sample SQL JOIN statement
+#' paste("select * from TAB1, TAB2 where", sql_expr)
+#'
 #' @import magrittr
 #' @export
 natural_key <- function(

@@ -13,6 +13,7 @@
 #' @author Uwe Block
 #' @examples
 #' lazysql:::valid_identifier_regex()
+#' @keywords internal
 #'
 valid_identifier_regex <- function() {
   return("^[[:alpha:]][_[:alnum:]]*$")

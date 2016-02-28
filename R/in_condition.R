@@ -7,7 +7,8 @@
 #' @param column_name [character(1)]\cr
 #'  Name of data base column to select values from.
 #' @param choices [character(1:Inf)] or [integer(1:Inf)]\cr
-#'  The values which must be matched.
+#'  The values which must be matched. Character values must not contain any
+#'  single or double quotes.
 #' @param negation [character(1)]\cr
 #'  If \code{"not"} the selection is inverted to a \code{NOT IN} expression.
 #'
@@ -16,10 +17,14 @@
 #' @author Uwe Block
 #'
 #' @examples
-#' in_condition("COL_1", 1:3)
-#' in_condition("COL_1", 1:3, "not")
-#' in_condition("COL_1", LETTERS[2:3])
-#' in_condition("COL_1", LETTERS[2:3], "not")
+#' # SQL expressions
+#' lazysql::in_condition("COL_1", 1:3)
+#'
+#' lazysql::in_condition("COL_1", 1:3, "not")
+#'
+#' lazysql::in_condition("COL_1", LETTERS[2:3])
+#'
+#' lazysql::in_condition("COL_1", LETTERS[2:3], "not")
 #'
 #' @import magrittr
 #' @export
@@ -32,7 +37,8 @@ in_condition <- function(
   checkmate::assert_character(column_name, pattern = valid_identifier_regex())
   checkmate::assert(
     checkmate::checkCharacter(choices, any.missing = FALSE,
-                              min.len = 1L),
+                              min.len = 1L, pattern = "^[^'\"]*$"),
+    # see http://stackoverflow.com/a/198810 for the regex pattern
     checkmate::checkInteger(choices, any.missing = FALSE,
                             min.len = 1L)
   )

@@ -3,5 +3,4 @@
 export(date_between)
 export(in_condition)
 export(natural_key)
-export(valid_identifier_regex)
 import(magrittr)

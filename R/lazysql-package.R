@@ -1,8 +1,18 @@
-#' Helpers to create SQL statements
+#' Lazy SQL programming
 #'
 #' @description
-#'  Helper functions to create commonly used SQL expressions which can be
-#'  used to build SQL statements under program control.
+#'  Helper functions to build SQL statements
+#'  for dbGetQuery or dbSendQuery under program control.
+#'
+#' @details
+#'  More patterns will be added as required.
+#'
+#' @author Uwe Block
+#'
+#' @seealso
+#'  \code{\link{date_between}},
+#'  \code{\link{in_condition}},
+#'  \code{\link{natural_key}}
 #'
 #' @name lazysql
 #' @docType package

@@ -1,11 +1,14 @@
 Package: lazysql
 Type: Package
 Title: Lazy SQL programming
-Version: 0.1.0
-Authors@R: person("Uwe", "Block", email = "u.block.mz@gmail.com",
-                  role = c("aut", "cre"))
-Description: Helper functions to create SQL expressions which can be
-    combined to SQL statements under program control.
+Version: 0.1.1
+Authors@R:
+    person("Uwe", "Block", email = "u.block.mz@gmail.com",
+           role = c("aut", "cre"))
+Description:
+    Helper functions to build SQL statements
+    for dbGetQuery or dbSendQuery under program control.
+    More patterns will be added as required.
 License: MIT + file LICENSE
 LazyData: TRUE
 Imports:

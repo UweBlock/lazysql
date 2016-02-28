@@ -15,10 +15,18 @@
 #' @examples
 #' date1 <- as.Date("2016-02-22")
 #' date2 <- as.Date("2016-02-11")
-#' paste("select * from TEST_TABLE where",
-#'       date_between("STD_1", c(date1, date2)))
-#' paste("select * from TEST_TABLE where",
-#'       date_between("STD_1", date1))
+#'
+#' # SQL expression for a date range
+#' (sql_expr1 <- lazysql::date_between("STD_1", c(date1, date2)))
+#'
+#' # SQL expression for a single date
+#' (sql_expr2 <- lazysql::date_between("STD_1", date1))
+#'
+#' # sample SQL statements
+#' paste("select * from TEST_TABLE where", sql_expr1)
+#'
+#' paste("select * from TEST_TABLE where", sql_expr2)
+#'
 #' @export
 date_between <- function(
   column_name,
