@@ -12,8 +12,8 @@
 #'
 #' @author Uwe Block
 #' @examples
-#' valid_identifier_regex()
-#' @export
+#' lazysql:::valid_identifier_regex()
+#'
 valid_identifier_regex <- function() {
   return("^[[:alpha:]][_[:alnum:]]*$")
 }
