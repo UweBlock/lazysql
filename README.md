@@ -69,3 +69,15 @@ lazysql::in_condition("COL_1", LETTERS[2:3], "not")
 paste("select * from TAB1, TAB2 where", sql_expr)
 #> [1] "select * from TAB1, TAB2 where TAB1.COL1 = tab_2.COL1 and TAB1.col_2 = tab_2.col_2"
 ```
+
+Installation
+------------
+
+Get the development version from github:
+
+``` r
+if (!"devtools" %in% installed.packages()) install.packages("devtools")
+devtools::install_github("UweBlock/lazysql")
+```
+
+CRAN release is in preparation.
