@@ -2,9 +2,9 @@
 lazysql
 =======
 
-Lazy SQL programming.
+[![Travis-CI Build Status](https://travis-ci.org/UweBlock/lazysql.svg?branch=master)](https://travis-ci.org/UweBlock/lazysql)
 
-------------------------------------------------------------------------
+Lazy SQL programming.
 
 Helper functions to build SQL statements under program control for use with dbGetQuery or dbSendQuery.
 
