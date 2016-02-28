@@ -19,3 +19,5 @@ Imports:
 Suggests:
     testthat
 RoxygenNote: 5.0.1
+URL: https://github.com/UweBlock/lazysql
+BugReports: https://github.com/UweBlock/lazysql/issues
