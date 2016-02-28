@@ -3,6 +3,7 @@ lazysql
 =======
 
 [![Travis-CI Build Status](https://travis-ci.org/UweBlock/lazysql.svg?branch=master)](https://travis-ci.org/UweBlock/lazysql)
+[![Coverage Status](https://img.shields.io/coveralls/UweBlock/lazysql.svg)](https://coveralls.io/r/UweBlock/lazysql?branch=master)
 
 Lazy SQL programming.
 
