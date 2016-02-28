@@ -33,8 +33,8 @@ in_condition <- function(
   choices,
   negation = c("", "not")
 ) {
-  checkmate::assert_string(column_name, na.ok = FALSE, empty.ok = FALSE)
-  checkmate::assert_character(column_name, pattern = valid_identifier_regex())
+  checkmate::assert_string(column_name, na.ok = FALSE, min.chars = 1L,
+                           pattern = valid_identifier_regex())
   checkmate::assert(
     checkmate::checkCharacter(choices, any.missing = FALSE,
                               min.len = 1L, pattern = "^[^'\"]*$"),
@@ -44,7 +44,7 @@ in_condition <- function(
   )
   checkmate::assert_subset(negation, eval(formals()$negation))
   negation <- match.arg(negation)
-  checkmate::assert_string(negation, na.ok = FALSE, empty.ok = TRUE)
+  checkmate::assert_string(negation, na.ok = FALSE, min.chars = 0L)
   # helper function
   prepare_values <- function(x) {
     if (is.character(x)) {

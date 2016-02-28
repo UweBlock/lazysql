@@ -1,7 +1,7 @@
 Package: lazysql
 Type: Package
 Title: Lazy SQL programming
-Version: 0.1.1
+Version: 0.1.2
 Authors@R:
     person("Uwe", "Block", email = "u.block.mz@gmail.com",
            role = c("aut", "cre"))
@@ -13,7 +13,7 @@ License: MIT + file LICENSE
 LazyData: TRUE
 Imports:
     assertive.base,
-    checkmate,
+    checkmate (>= 1.7.2),
     magrittr,
     plyr
 Suggests:

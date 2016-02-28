@@ -32,8 +32,8 @@ date_between <- function(
   column_name,
   date_range
 ) {
-  checkmate::assert_string(column_name, na.ok = FALSE, empty.ok = FALSE)
-  checkmate::assert_character(column_name, pattern = valid_identifier_regex())
+  checkmate::assert_string(column_name, na.ok = FALSE, min.chars = 1L,
+                           pattern = valid_identifier_regex())
   checkmate::assert_numeric(date_range, any.missing = FALSE,
                             min.len = 1L, max.len = 2L)
   checkmate::assert_class(date_range, "Date")
