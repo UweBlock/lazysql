@@ -12,9 +12,9 @@ Helper functions to build SQL statements under program control for use with dbGe
 
 Currently implemented are:
 
--   `date_between` Create SQL string to select date between two given dates
--   `in_condition` Create SQL string to select values included in a set of given values
--   `natural_key` Create SQL string for joining on matching natural keys
+-   `date_between` Create SQL string to select date between two given dates.
+-   `in_condition` Create SQL string to select values included (or not included) in a set of given values.
+-   `natural_key` Create SQL string for joining on matching natural keys.
 
 More patterns will be added as required.
 
