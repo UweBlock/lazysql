@@ -8,7 +8,7 @@
 #'  Name of data base column to select values from.
 #' @param choices [character(1:Inf)] or [integer(1:Inf)]\cr
 #'  The values which must be matched. Character values must not contain any
-#'  single or double quotes.
+#'  single or double quotes to avoid problems with SQL syntax.
 #' @param negation [character(1)]\cr
 #'  If \code{"not"} the selection is inverted to a \code{NOT IN} expression.
 #'
