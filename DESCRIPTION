@@ -2,13 +2,15 @@ Package: lazysql
 Type: Package
 Title: Lazy SQL programming
 Version: 0.1.2
-Authors@R:
-    person("Uwe", "Block", email = "u.block.mz@gmail.com",
-           role = c("aut", "cre"))
 Description:
     Helper functions to build SQL statements
     for dbGetQuery or dbSendQuery under program control.
     More patterns will be added as required.
+Authors@R:
+    person("Uwe", "Block", email = "u.block.mz@gmail.com",
+           role = c("aut", "cre"))
+URL: https://github.com/UweBlock/lazysql
+BugReports: https://github.com/UweBlock/lazysql/issues
 License: MIT + file LICENSE
 LazyData: TRUE
 Imports:
@@ -18,5 +20,3 @@ Imports:
 Suggests:
     testthat
 RoxygenNote: 5.0.1
-URL: https://github.com/UweBlock/lazysql
-BugReports: https://github.com/UweBlock/lazysql/issues
