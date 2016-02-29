@@ -12,7 +12,6 @@ Description:
 License: MIT + file LICENSE
 LazyData: TRUE
 Imports:
-    assertive.base,
     checkmate (>= 1.7.2),
     magrittr,
     plyr

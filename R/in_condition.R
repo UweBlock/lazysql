@@ -58,7 +58,7 @@ in_condition <- function(
     choices %>%
     prepare_values %>%
     paste(collapse = ", ") %>%
-    assertive.base::parenthesise() %>%
+    paste0("(", ., ")") %>%
     paste(column_name, negation, "in", .)
   return(sql)
 }
