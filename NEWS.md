@@ -1,3 +1,11 @@
+# lazysql 0.1.2
+
+* Fixed issues caused by changes in package `chekcmate` v1.7.2.
+* Removed dependency on package `assertive.base`.
+* Declared global variables to avoid notes from CRAN check wenn using `.` from package `magrittr`.
+* Updated documentation.
+* Added continuous integration with `travis-ci`, `appveyor`, and `coveralls`.
+
 # lazysql 0.1.1
 
 * Don't allow `choices` to contain quotes in `in_condition()`.
