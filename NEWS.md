@@ -1,7 +1,7 @@
 # lazysql 0.1.2
 
-* Replaced `shQuote` in `in_condition()` because it behaves differently on 
-  Windows.
+* Replaced `shQuote` because it returns escaped double quotes on 
+  Windows instead of single quotes.
 * Fixed issues caused by changes in new version v1.7.2 of package `checkmate`.
 * Removed dependency on package `assertive.base`.
 * Declared global variables to avoid notes from CRAN check wenn using `.` 
