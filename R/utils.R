@@ -1,3 +1,6 @@
+# avoid CRAN notes when using magrittr
+utils::globalVariables(".")
+
 #' Regex pattern for valid SQL identifier names
 #'
 #' @description
