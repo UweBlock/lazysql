@@ -48,7 +48,7 @@ in_condition <- function(
   # helper function
   prepare_values <- function(x) {
     if (is.character(x)) {
-      return(shQuote(x))
+      return(paste0("'", x, "'"))
     } else {
       return(as.character(x))
     }
