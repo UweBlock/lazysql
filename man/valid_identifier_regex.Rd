@@ -15,7 +15,7 @@ The identifier must start with an alphabetic character followed by
 alphanumeric characters or the underscore \code{_}.
 }
 \examples{
-lazysql:::valid_identifier_regex()
+lazysql::valid_identifier_regex()
 }
 \author{
 Uwe Block
@@ -23,5 +23,4 @@ Uwe Block
 \references{
 ORACLE Database SQL Language Reference
 }
-\keyword{internal}
 

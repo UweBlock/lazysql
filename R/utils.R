@@ -15,8 +15,8 @@ utils::globalVariables(".")
 #'
 #' @author Uwe Block
 #' @examples
-#' lazysql:::valid_identifier_regex()
-#' @keywords internal
+#' lazysql::valid_identifier_regex()
+#' @export
 #'
 valid_identifier_regex <- function() {
   return("^[[:alpha:]][_[:alnum:]]*$")
