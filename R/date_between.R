@@ -9,9 +9,16 @@
 #' @param date_range [Date(1:2)]\cr
 #'  One or two dates giving the date range in which the dates should be enclosed (closed interval).
 #'  If only one date is given, it is taken for both upper and lower limits.
+
+#' @details
+#'  \code{column_name} must be a valid SQL identifier. It is validated to conform to
+#'  the regular expression returned by \code{\link{valid_identifier_regex}}.
+#'
 #' @return
 #'  Character string to be used in SQL statement.
+
 #' @author Uwe Block
+
 #' @examples
 #' date1 <- as.Date("2016-02-22")
 #' date2 <- as.Date("2016-02-11")
@@ -27,6 +34,7 @@
 #'
 #' paste("select * from TEST_TABLE where", sql_expr2)
 #'
+#' @seealso \code{\link{valid_identifier_regex}}.
 #' @export
 date_between <- function(
   column_name,

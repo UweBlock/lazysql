@@ -2,17 +2,25 @@
 % Please edit documentation in R/utils.R
 \name{valid_identifier_regex}
 \alias{valid_identifier_regex}
-\title{Regex pattern for valid SQL identifier names}
+\title{Regex pattern to validate SQL identifier names}
 \usage{
 valid_identifier_regex()
 }
 \value{
-Character string with regular expression
+Character string with regular expression.
 }
 \description{
-Returns a regular expression for valid unquoted SQL identifiers.
-The identifier must start with an alphabetic character followed by
-alphanumeric characters or the underscore \code{_}.
+Returns a regular expression to validate unquoted SQL identifiers.
+}
+\details{
+Valid SQL identifiers must begin with an alphabetic character followed by
+alphanumeric characters or underscores "\code{_}".
+}
+\note{
+The current implementation doesn't allow any other special characters in
+SQL identfiers or quoted SQL identifiers for safety reasons.
+In future releases, valid SQL identifiers might be defined depending
+on the target database system.
 }
 \examples{
 lazysql::valid_identifier_regex()
@@ -21,6 +29,6 @@ lazysql::valid_identifier_regex()
 Uwe Block
 }
 \references{
-ORACLE Database SQL Language Reference
+ORACLE Database SQL Language Reference.
 }
 

@@ -21,6 +21,10 @@ Character string to be used in SQL statement.
 Create string with SQL \code{BETWEEN} expression for \code{WHERE} clause to select dates
  within the given range.
 }
+\details{
+\code{column_name} must be a valid SQL identifier. It is validated to conform to
+ the regular expression returned by \code{\link{valid_identifier_regex}}.
+}
 \examples{
 date1 <- as.Date("2016-02-22")
 date2 <- as.Date("2016-02-11")
@@ -39,5 +43,8 @@ paste("select * from TEST_TABLE where", sql_expr2)
 }
 \author{
 Uwe Block
+}
+\seealso{
+\code{\link{valid_identifier_regex}}.
 }
 

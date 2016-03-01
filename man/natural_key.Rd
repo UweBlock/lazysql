@@ -8,7 +8,7 @@ natural_key(table_names, key_columns)
 }
 \arguments{
 \item{table_names}{[character(2)]\cr
-Name of data base tables to join.}
+Name of data base tables to be joined.}
 
 \item{key_columns}{[character(1:Inf)]\cr
 Names of key columns in both tables.}
@@ -21,7 +21,11 @@ Create string with SQL expressions for \code{WHERE} clause
  to join two tables on the given columns.
 }
 \details{
-The SQL string is created in 3 steps:
+The names of tables and key columns must be valid SQL identifiers.
+ They are validated to conform to
+ the regular expression returned by \code{\link{valid_identifier_regex}}.
+
+ The SQL string is created in 3 steps:
  \enumerate{
    \item Combine table names with key names, eg, "\code{PRL.FLIGHT_NR}".
    \item Create logical expressions, eg, "\code{PRL.FLIGHT_NR = PRL_SSR.FLIGHT_NR}"
@@ -41,5 +45,8 @@ paste("select * from TAB1, TAB2 where", sql_expr)
 }
 \author{
 Uwe Block
+}
+\seealso{
+\code{\link{valid_identifier_regex}}.
 }
 

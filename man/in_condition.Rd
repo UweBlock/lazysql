@@ -12,7 +12,7 @@ Name of data base column to select values from.}
 
 \item{choices}{[character(1:Inf)] or [integer(1:Inf)]\cr
 The values which must be matched. Character values must not contain any
-single or double quotes to avoid problems with SQL syntax.}
+single or double quotes to avoid problems with SQL syntax and for safety reasons.}
 
 \item{negation}{[character(1)]\cr
 If \code{"not"} the selection is inverted to a \code{NOT IN} expression.}
@@ -23,6 +23,10 @@ Character string to be used in SQL statement.
 \description{
 Create string with SQL \code{IN} expression for \code{WHERE} clause to select values
  included in a set of given values.
+}
+\details{
+\code{column_name} must be a valid SQL identifier. It is validated to conform to
+ the regular expression returned by \code{\link{valid_identifier_regex}}.
 }
 \examples{
 # SQL expressions
@@ -37,5 +41,8 @@ lazysql::in_condition("COL_1", LETTERS[2:3], "not")
 }
 \author{
 Uwe Block
+}
+\seealso{
+\code{\link{valid_identifier_regex}}.
 }
 
