@@ -1,7 +1,7 @@
 ## Test environments
 * local centos 6.6, R 3.2.3
 * ubuntu 12.04 (on travis-ci), R 3.1.3, 3.2.3, and devel
-* Windows Server 2012 (on appveyor), R 3.1.3, 3.2.3, and devel
+* Windows Server 2012 (on appveyor), R 3.1.3, 3.2.4, and devel
 
 ## R CMD check results
 
