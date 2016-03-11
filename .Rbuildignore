@@ -4,3 +4,6 @@
 ^README-.*\.png$
 ^\.travis\.yml$
 ^appveyor\.yml$
+^NEWS\.md$
+^cran-comments\.md$
+^CONDUCT\.md$
