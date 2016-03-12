@@ -1,7 +1,7 @@
 Package: lazysql
 Type: Package
 Title: Lazy SQL Programming
-Version: 0.1.3
+Version: 0.1.3.9000
 Date: 2016-03-11
 Description:
     Helper functions to build SQL statements
