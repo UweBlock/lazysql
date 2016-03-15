@@ -5,6 +5,8 @@ lazysql
 [![Travis-CI Build Status](https://travis-ci.org/UweBlock/lazysql.svg?branch=master)](https://travis-ci.org/UweBlock/lazysql)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/UweBlock/lazysql?branch=master&svg=true)](https://ci.appveyor.com/project/UweBlock/lazysql)
 [![Coverage Status](https://coveralls.io/repos/github/UweBlock/lazysql/badge.svg?branch=master)](https://coveralls.io/github/UweBlock/lazysql?branch=master)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/lazysql)](http://cran.r-project.org/package=lazysql)
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
 Lazy SQL programming.
 
@@ -75,14 +77,18 @@ paste("select * from TAB1, TAB2 where", sql_expr)
 Installation
 ------------
 
+Get the released version from CRAN:
+
+``` r
+install.packages("lazysql")
+```
+
 Get the development version from github:
 
 ``` r
 if (!"devtools" %in% installed.packages()) install.packages("devtools")
 devtools::install_github("UweBlock/lazysql")
 ```
-
-CRAN release is in preparation.
 
 Contributor Code of Conduct
 ---------------------------

@@ -1,5 +1,8 @@
 # lazysql 0.1.3.9000
 
+* Update installation section in `README.Rmd` to include CRAN release.
+* Add CRAN Status Badge and Project Status Badge to `README.Rmd`.
+
 # lazysql 0.1.3
 
 * Add cran-comments.md file.
