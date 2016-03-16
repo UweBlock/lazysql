@@ -1,5 +1,8 @@
 # lazysql 0.1.3.9000
 
+* Make documentation of `lazysql-package.R` consistent with `README.Rmd` and 
+  `DESCRIPTION` files.
+* Mention `sqldf` as potential beneficiary in package docs.
 * Update installation section in `README.Rmd` to include CRAN release.
 * Add CRAN Status Badge and Project Status Badge to `README.Rmd`.
 

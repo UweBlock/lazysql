@@ -10,7 +10,7 @@ lazysql
 
 Lazy SQL programming.
 
-Helper functions to build SQL statements under program control for use with dbGetQuery or dbSendQuery. They are intended to increase speed of coding and to reduce coding errors. Arguments are carefully checked, in particular SQL identifiers such as names of tables or columns.
+Helper functions to build SQL statements under program control for use with `dbGetQuery`, `dbSendQuery`, `sqldf`, etc. They are intended to increase speed of coding and to reduce coding errors. Arguments are carefully checked, in particular SQL identifiers such as names of tables or columns.
 
 Currently implemented are:
 

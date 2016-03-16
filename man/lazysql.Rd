@@ -6,11 +6,13 @@
 \alias{lazysql-package}
 \title{Lazy SQL programming}
 \description{
-Helper functions to build SQL statements
- for dbGetQuery or dbSendQuery under program control.
-}
-\details{
-More patterns will be added as required.
+Helper functions to build SQL statements under program control
+ for \code{\link[DBI]{dbGetQuery}}, \code{\link[DBI]{dbSendQuery}},
+ \code{\link[sqldf]{sqldf}}, etc.
+ They are intended to increase speed of coding and
+ to reduce coding errors. Arguments are carefully checked,
+ in particular SQL identifiers such as names of tables or columns.
+ More patterns will be added as required.
 }
 \author{
 Uwe Block
